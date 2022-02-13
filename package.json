@@ -1,0 +1,29 @@
+{
+  "name": "temperatureconverter",
+  "version": "1.0.0",
+  "description": "Task1",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandrXXL/TemperatureConverter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandrXXL/TemperatureConverter/issues"
+  },
+  "homepage": "https://github.com/AlexandrXXL/TemperatureConverter#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
