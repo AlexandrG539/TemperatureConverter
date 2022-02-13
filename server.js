@@ -37,6 +37,13 @@ app.post('/FahToKel', (req, res) => {
   res.send(JSON.stringify(ans));
 }
 
+app.post('/KelToCel', (req, res) => {
+  let t = +req.body.t;
+  let ans = t - 273.15;
+  res.send(JSON.stringify(ans));
+}
+
+
 app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`Server started on port ${PORT}`);
 });
