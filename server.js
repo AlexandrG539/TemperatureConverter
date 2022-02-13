@@ -29,3 +29,9 @@ app.post('/CelToKel', (req, res) => {
   res.send(JSON.stringify(ans));
 }
 
+app.post('/FahToCel', (req, res) => {
+  let t = +req.body.t;
+  let ans = (t - 32) * (5/9);
+  res.send(JSON.stringify(ans));
+}
+
