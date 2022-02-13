@@ -13,3 +13,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/server.html'));
 });
 
+app.listen(PORT, (error) => {
+  error ? console.log(error) : console.log(`Server started on port ${PORT}`);
+});
+
+
