@@ -17,4 +17,10 @@ app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`Server started on port ${PORT}`);
 });
 
+app.post('/CelToFah', (req, res) => {
+  let t = +req.body.t;
+  let ans = t * (9/5) + 32;
+  res.send(JSON.stringify(ans));
+}
+
 
