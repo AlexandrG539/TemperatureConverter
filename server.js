@@ -13,8 +13,51 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/server.html'));
 });
 
+app.post('/CelToFah', (req, res) => {
+  let t = +req.body.t;
+  let ans = t * (9/5) + 32;
+  res.send(JSON.stringify(ans));
+});
+
+app.post('/CelToKel', (req, res) => {
+  let t = +req.body.t;
+  let ans = t + 273.15;
+  res.send(JSON.stringify(ans));
+});
+
+app.post('/FahToCel', (req, res) => {
+  let t = +req.body.t;
+  let ans = (t - 32) * (5/9);
+  res.send(JSON.stringify(ans));
+});
+
+app.post('/FahToKel', (req, res) => {
+  let t = +req.body.t;
+  let ans = (t + 459.67) * (5/9);
+  res.send(JSON.stringify(ans));
+});
+
+app.post('/KelToCel', (req, res) => {
+  let t = +req.body.t;
+  let ans = t - 273.15;
+  res.send(JSON.stringify(ans));
+});
+
+app.post('/KelToCel', (req, res) => {
+  let t = +req.body.t;
+  let ans = t - 273.15;
+  res.send(JSON.stringify(ans));
+});
+
+app.post('/KelToFah', (req, res) => {
+  let t = +req.body.t;
+  let ans = t * (9/5) - 459.67;
+  res.send(JSON.stringify(ans));
+});
+
+
+
 app.listen(PORT, (error) => {
   error ? console.log(error) : console.log(`Server started on port ${PORT}`);
 });
-
 
