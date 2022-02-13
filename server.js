@@ -13,10 +13,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/server.html'));
 });
 
-app.listen(PORT, (error) => {
-  error ? console.log(error) : console.log(`Server started on port ${PORT}`);
-});
-
 app.post('/CelToFah', (req, res) => {
   let t = +req.body.t;
   let ans = t * (9/5) + 32;
@@ -34,4 +30,14 @@ app.post('/FahToCel', (req, res) => {
   let ans = (t - 32) * (5/9);
   res.send(JSON.stringify(ans));
 }
+
+app.post('/FahToKel', (req, res) => {
+  let t = +req.body.t;
+  let ans = (t + 459) * (5/9);
+  res.send(JSON.stringify(ans));
+}
+
+app.listen(PORT, (error) => {
+  error ? console.log(error) : console.log(`Server started on port ${PORT}`);
+});
 
